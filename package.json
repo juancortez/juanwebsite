@@ -2,9 +2,11 @@
   "name": "JuanWebsite",
   "version": "1.0.0",
   "description": "Juan Cortez website",
+  "homepage": "https://juancortez.github.io/juanwebsite",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack",
+    "dev": "webpack -p",
+    "deploy" : "webpack -p && gh-pages -d build",
     "start": "webpack-dev-server"
   },
   "author": "Juan Cortez",
@@ -44,6 +46,7 @@
     "babel-plugin-react-transform": "^2.0.2",
     "babel-preset-stage-0": "^6.5.0",
     "extract-text-webpack-plugin": "^1.0.1",
+    "gh-pages": "^1.0.0",
     "react-addons-css-transition-group": "^15.2.1",
     "react-transform-hmr": "^1.0.4"
   }

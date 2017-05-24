@@ -5,7 +5,7 @@ const path = require('path'),
 module.exports = {
     devServer: {
         inline: true,
-        contentBase: './src',
+        contentBase: './build',
         port: 3000
     },
     devtool: 'cheap-module-eval-source-map',
@@ -24,7 +24,7 @@ module.exports = {
         ]
     },
     output: {
-        path: 'src',
+        path: 'build',
         filename: 'js/bundle.min.js'
     },
     plugins: [
