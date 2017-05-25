@@ -1,6 +1,7 @@
 import React, {Component} 	from 'react';
 import Image 				from './image.js';
 import SkillList 			from '../containers/skill-list';
+import NavigationComponent 	from './navigation';
 
 export default class Main extends Component{
 	render(){
@@ -20,6 +21,7 @@ export default class Main extends Component{
 							<h1>Juan Cortez </h1>
 							<SkillList/>
 						</div>
+						<NavigationComponent/>
 					</div>
 				</div>
 		);

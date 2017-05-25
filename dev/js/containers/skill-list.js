@@ -10,6 +10,7 @@ class SkillList extends Component {
 			return (
 				<li 
 					key={skill.id}
+					className="skills"
 					onClick={() => this.props.selectSkill(skill)}
 				>
 					{skill.name}
@@ -20,7 +21,7 @@ class SkillList extends Component {
 
 	render(){
 		return (
-			<ul>
+			<ul className="skills-list">
 				{this.createSkillItems()}
 			</ul>
 		);

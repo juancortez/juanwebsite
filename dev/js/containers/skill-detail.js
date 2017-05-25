@@ -6,7 +6,7 @@ import Skill				from './../components/skill';
 class SkillDetail extends Component {
 	constructor(props){
 		super(props);
-		this.onReset = this.onReset.bind(this);
+		this.goBack = this.goBack.bind(this);	
 	}
 
 	render(){
@@ -14,7 +14,7 @@ class SkillDetail extends Component {
 		let{id, name, icon, link, imageClass} = skill;
 
 		if(name){
-			return (<div className="skill-container"><Skill icon={icon} link={link} imageClass={imageClass} skill={skill}/><button className="back-button" onClick={this.onReset}>Go Back</button></div>);
+			return (<div className="skill-container"><Skill icon={icon} goBack={this.goBack} link={link} imageClass={imageClass} skill={skill}/></div>);
 		} else{
 			return(
 				<h1> TODO</h1>
@@ -22,8 +22,8 @@ class SkillDetail extends Component {
 		}
 	}
 
-	onReset(){
-		console.log("RESET");	
+	goBack(){
+		this.props.reset();
 	}
 }
 

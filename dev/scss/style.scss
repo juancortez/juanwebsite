@@ -55,7 +55,7 @@ body{
 	    .content{
 		    width: 100%;
 		    text-align: left;
-		    height: 440px;
+		    height: 475px;
 		    color: #e1dfe0;
 		    z-index: 1;
 		    background-size: cover;
@@ -71,9 +71,9 @@ body{
 				    letter-spacing: 5px;
 				    color:white;
 	    		}
-	    		ul{
+	    		ul.skills-list{
 	    			width: 350px;
-		    		li{
+		    		li.skills{
 		    			list-style-type: none;
 		    			font-size: 20px;
 		    			cursor: pointer;
@@ -87,11 +87,29 @@ body{
 		    			&:hover{
 		    				color: yellow;
 		    			}
-		    		}
-	    			
+		    		}	
 	    		}
 
 		    }
+    		.navigation-container{
+    			ul.navigation-items{
+				    column-count: 4;
+    				column-gap: 30px;
+    				padding: 10px;
+    				li{
+    					color: #e9d9d0;
+    					list-style-type: none;
+    					cursor: pointer;
+    					text-align: center;
+    					&:hover{
+    						color: $burnt-orange-color;
+    					}
+    				}
+    				a{
+    					color: inherit;
+    				}
+    			}
+    		}
     		
 	    }
 	}
@@ -226,6 +244,10 @@ body{
 	    height: 100%;
 	    background: #000;
 	    opacity: 0.5;
+    }
+
+    .navigation-container{
+    	
     }
 }
 

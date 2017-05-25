@@ -1,6 +1,7 @@
 import React, {Component} 	from 'react';
 import FontAwesome 			from 'react-fontawesome';
 import Image 				from './image.js';
+import PropTypes 			from 'prop-types';
 
 export default class Skill extends Component {
 	render(){
@@ -41,7 +42,22 @@ export default class Skill extends Component {
 					<p> {description}</p>
 					{bodyContent}
 				</div>
+				<button className="back-button" onClick={this.props.goBack}>Go Back</button>
 			</div>
 		);
 	}
 };
+
+/* https://github.com/facebook/prop-types */ 
+Skill.propTypes = {
+	skill: PropTypes.shape({
+		name: PropTypes.string.isRequired,
+		id: PropTypes.number.isRequired,
+		description: PropTypes.string.isRequired,
+		icon: PropTypes.string,
+		link: PropTypes.string,
+		imageClass: PropTypes.string
+	}),
+	imageClass: PropTypes.string,
+	link: PropTypes.string
+}
