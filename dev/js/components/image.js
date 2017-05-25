@@ -11,6 +11,7 @@ export default class Image extends Component {
 	render(){
 		let classes = this.props.className,
 			src = this.props.src;
+		
 		// if(!this.state.isLocal) src = 'juanwebsite/' + src;
 
 		return(
