@@ -1,7 +1,7 @@
 import React, {Component}   from 'react';
 import {connect} 			from 'react-redux';
 import FontAwesome 			from 'react-fontawesome';
-import {Link}  				from 'React-router-dom';
+import {Link}  				from 'react-router-dom';
 
 class LinksContainer extends Component {
 	constructor(props){
@@ -18,6 +18,8 @@ class LinksContainer extends Component {
 					>
 						<Link to="/resume">
 							<FontAwesome
+								title={link.name}
+								alt={link.name}
 								className="nav-icons"
 		        				name={link.icon}
 		        				size='2x'/>
@@ -29,8 +31,10 @@ class LinksContainer extends Component {
 					<li 
 						key={link.id}
 					>
-						<a href={link.url}>
+						<a href={link.url} title={link.name}>
 							<FontAwesome
+								title={link.name}
+								alt={link.name}
 								className="nav-icons"
 		        				name={link.icon}
 		        				size='2x'/>
